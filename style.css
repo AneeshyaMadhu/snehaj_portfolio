@@ -1,0 +1,153 @@
+﻿* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #f7f6f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  color: #1d0f0f;
+}
+
+.page-shell {
+  width: 100%;
+  max-width: 1220px;
+  padding: 64px 24px;
+}
+
+.canvas {
+  position: relative;
+  min-height: 560px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.canvas::before {
+  content: '';
+  position: absolute;
+  top: 16%;
+  left: 10%;
+  width: 220px;
+  height: 220px;
+  background: rgba(176, 32, 32, 0.08);
+  border-radius: 24px;
+}
+
+.corner {
+  position: absolute;
+  border-color: #9c1515;
+}
+
+.top-left {
+  top: 64px;
+  left: 64px;
+  width: 130px;
+  height: 78px;
+  border-top: 4px solid;
+  border-left: 4px solid;
+}
+
+.top-right {
+  top: 58px;
+  right: 64px;
+  width: 160px;
+  height: 82px;
+  border-top: 4px solid;
+  border-right: 4px solid;
+}
+
+.mid-left {
+  top: 52%;
+  left: 74px;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 94px;
+  border-left: 4px solid;
+  border-bottom: 4px solid;
+}
+
+.photo-card {
+  position: absolute;
+  top: 50%;
+  right: 12%;
+  width: 360px;
+  aspect-ratio: 1 / 1;
+  transform: translateY(-50%);
+  background: rgba(183, 34, 34, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 30px 75px rgba(183, 34, 34, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.38em;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.photo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.14), transparent 40%);
+}
+
+.photo-card span {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .canvas {
+    min-height: 460px;
+  }
+  .photo-card {
+    width: 300px;
+    right: 10%;
+  }
+  .top-left,
+  .top-right,
+  .mid-left {
+    width: 112px;
+    height: 66px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 32px 0;
+  }
+  .page-shell {
+    padding: 32px 18px;
+  }
+  .canvas {
+    min-height: 420px;
+  }
+  .photo-card {
+    width: 240px;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  .top-left {
+    left: 20px;
+    top: 24px;
+  }
+  .top-right {
+    right: 20px;
+    top: 24px;
+  }
+  .mid-left {
+    left: 20px;
+    top: 48%;
+  }
+}
