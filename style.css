@@ -539,3 +539,49 @@
     }
 
 }
+@media (max-width: 768px){
+
+    .hero{
+        padding: 0 20px;
+    }
+
+    .hero-sub{
+        font-size: .65rem;
+        letter-spacing: 4px;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    .hero-title{
+        font-size: 3.8rem !important;
+        letter-spacing: 1px !important;
+        line-height: .9;
+    }
+
+    .hero-title::after{
+        letter-spacing: 1px !important;
+    }
+
+    .hero-name{
+        font-size: .95rem;
+        letter-spacing: 8px;
+        margin-top: 18px;
+    }
+
+    .red-orb{
+        width: 120vw;
+        height: 45vw;
+        max-height: 260px;
+    }
+
+    .scroll-indicator{
+        bottom: 25px;
+    }
+}
+@media (max-width:580px){
+
+    .hero-title{
+        font-size: 3rem !important;
+    }
+
+}
