@@ -460,6 +460,25 @@
     color:#25D366;
     font-size:2rem;
 }
+.fa-envelope{
+    font-size:2rem;
+
+    background: linear-gradient(
+        45deg,
+        #4285F4 0%,
+        #34A853 25%,
+        #FBBC05 50%,
+        #EA4335 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+.fa-phone{
+    color:#22c55e;
+    font-size:2rem;
+}
 @media (max-width: 768px){
 
     .about{
